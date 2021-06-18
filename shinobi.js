@@ -118,7 +118,7 @@ class Shinobi {
         this.shinobiDirection === true ? this.imageInstance.src = 'img/puño ninja.png' : this.imageInstance.src = 'img/asset ninja2.png'
         this.imageInstance.frames = 2;
         for (let i = 0; i < enemyArrayList.length; i++) {
-            this.shinobiPos.x + this.shinobiSize.w >= enemyArrayList[i].enemyPos.x ? (enemyArrayList.splice(i, 1), this.damageMusic()) : 0
+            this.shinobiPos.x + this.shinobiSize.w >= enemyArrayList[i].enemyPos.x ? (enemyArrayList.splice(i, 1), this.damageMusic(), this.puntos = this.puntos + 10) : 0
         }
     }
     attackPunch2() {
