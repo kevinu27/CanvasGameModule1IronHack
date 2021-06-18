@@ -86,7 +86,6 @@ const game = {
         this.canvasDOM.setAttribute('height', this.canvasSize.h)
     },
     setEventListeners() {
-
         document.onkeypress = e => {
             e.key === 'a' ? this.movementLeft() : null
             e.key === 'd' ? this.movementRight() : null
@@ -95,7 +94,7 @@ const game = {
             e.key === " " ? this.attackShuriken() : null
         }
         document.onkeydown = e => {
-            let pointsToSum = e.key === 'm' ? this.shinobi.attackPunch(this.enemyArrayList, this.puntos) : 0
+            const pointsToSum = e.key === 'm' ? this.shinobi.attackPunch(this.enemyArrayList, this.puntos) : 0
             this.puntos += pointsToSum
         }
         document.onkeyup = e => {

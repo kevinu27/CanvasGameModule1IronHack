@@ -114,7 +114,7 @@ class Shinobi {
             this.a = false
         }
     }
-    attackPunch(enemyArrayList, puntos) {
+    attackPunch(enemyArrayList) {
 
         this.shinobiDirection === true ? this.imageInstance.src = 'img/puño ninja.png' : this.imageInstance.src = 'img/asset ninja2.png'
         this.imageInstance.frames = 2;
